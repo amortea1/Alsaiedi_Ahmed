@@ -1,0 +1,2158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Formation 3 Ans | Embedded Systems Engineer → Japon | Déc 2025 → Déc 2028</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: #1a1a24;
+            --bg-card-hover: #22222e;
+            --accent-blue: #4f8cff;
+            --accent-cyan: #00d4aa;
+            --accent-orange: #ff6b35;
+            --accent-purple: #a855f7;
+            --accent-pink: #ec4899;
+            --accent-yellow: #fbbf24;
+            --accent-red: #ef4444;
+            --accent-green: #10b981;
+            --text-primary: #f0f0f5;
+            --text-secondary: #9ca3af;
+            --text-muted: #6b7280;
+            --border-color: rgba(255,255,255,0.08);
+            --gradient-hero: linear-gradient(135deg, #4f8cff 0%, #a855f7 50%, #ec4899 100%);
+            --gradient-cs50: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            --gradient-fastbit: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            --gradient-ielts: linear-gradient(135deg, #059669 0%, #047857 100%);
+            --gradient-japan: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            --gradient-rtos: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+            --gradient-linux: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 24px; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: 
+                radial-gradient(ellipse at 20% 20%, rgba(79, 140, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(168, 85, 247, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(220, 38, 38, 0.1) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(220, 38, 38, 0.1);
+            border: 1px solid rgba(220, 38, 38, 0.3);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            color: var(--accent-red);
+            margin-bottom: 32px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--accent-red);
+            border-radius: 50%;
+            animation: pulse-dot 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 7vw, 4.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            background: var(--gradient-hero);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-japan {
+            font-size: 3rem;
+            margin: 20px 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.1rem;
+            color: var(--accent-cyan);
+            background: rgba(0, 212, 170, 0.1);
+            border: 1px solid rgba(0, 212, 170, 0.3);
+            padding: 12px 28px;
+            border-radius: 8px;
+            margin-top: 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 16px;
+            margin-top: 50px;
+            width: 100%;
+            max-width: 1000px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-4px);
+            border-color: rgba(79, 140, 255, 0.3);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .stat-value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-top: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ===== NAVIGATION ===== */
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 12px 0;
+        }
+
+        .nav-inner {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 4px;
+            scrollbar-width: none;
+        }
+
+        .nav-inner::-webkit-scrollbar { display: none; }
+
+        .nav-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: all 0.2s ease;
+        }
+
+        .nav-link:hover {
+            background: var(--bg-card-hover);
+            color: var(--text-primary);
+            border-color: rgba(79, 140, 255, 0.3);
+        }
+
+        /* ===== SECTIONS ===== */
+        .section { padding: 80px 0; }
+        .section-alt { background: var(--bg-secondary); }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-tag {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--accent-cyan);
+            background: rgba(0, 212, 170, 0.1);
+            padding: 6px 14px;
+            border-radius: 4px;
+            margin-bottom: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ===== YEAR TABS ===== */
+        .year-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .year-tab {
+            padding: 16px 32px;
+            background: var(--bg-card);
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .year-tab:hover, .year-tab.active {
+            border-color: var(--accent-blue);
+            transform: translateY(-2px);
+        }
+
+        .year-tab.year1 { border-color: var(--accent-blue); }
+        .year-tab.year2 { border-color: var(--accent-purple); }
+        .year-tab.year3 { border-color: var(--accent-red); }
+
+        .year-tab-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .year-tab-subtitle {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* ===== MONTH CARDS ===== */
+        .month-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 24px;
+        }
+
+        .month-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 28px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .month-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: var(--gradient-hero);
+        }
+
+        .month-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            border-color: rgba(79, 140, 255, 0.2);
+        }
+
+        .month-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
+
+        .month-number {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent-cyan);
+            background: rgba(0, 212, 170, 0.1);
+            padding: 4px 12px;
+            border-radius: 4px;
+        }
+
+        .month-hours {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .month-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .month-content {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .month-content h4 {
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            margin: 16px 0 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .month-content ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .month-content li {
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+            font-size: 0.9rem;
+        }
+
+        .month-content li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent-cyan);
+        }
+
+        .course-badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            padding: 3px 10px;
+            border-radius: 4px;
+            margin-right: 6px;
+            margin-bottom: 4px;
+        }
+
+        .badge-cs50 { background: rgba(220, 38, 38, 0.15); color: #ef4444; }
+        .badge-fastbit { background: rgba(245, 158, 11, 0.15); color: #f59e0b; }
+        .badge-ielts { background: rgba(16, 185, 129, 0.15); color: #10b981; }
+        .badge-rtos { background: rgba(139, 92, 246, 0.15); color: #a78bfa; }
+        .badge-project { background: rgba(79, 140, 255, 0.15); color: var(--accent-blue); }
+        .badge-japan { background: rgba(220, 38, 38, 0.15); color: #ef4444; }
+        .badge-linux { background: rgba(249, 115, 22, 0.15); color: #f97316; }
+
+        /* ===== INFO BOXES ===== */
+        .info-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 28px;
+            margin: 24px 0;
+        }
+
+        .info-box.critical {
+            border-color: rgba(239, 68, 68, 0.3);
+            background: rgba(239, 68, 68, 0.05);
+        }
+
+        .info-box.success {
+            border-color: rgba(16, 185, 129, 0.3);
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        .info-box.warning {
+            border-color: rgba(251, 191, 36, 0.3);
+            background: rgba(251, 191, 36, 0.05);
+        }
+
+        .info-box.purple {
+            border-color: rgba(139, 92, 246, 0.3);
+            background: rgba(139, 92, 246, 0.05);
+        }
+
+        .info-box h3 {
+            font-size: 1.15rem;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-box ul { list-style: none; }
+
+        .info-box li {
+            padding: 10px 0;
+            padding-left: 24px;
+            position: relative;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .info-box li:last-child { border-bottom: none; }
+
+        .info-box li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-cyan);
+            font-weight: bold;
+        }
+
+        .info-box.critical li::before { content: '⚠'; color: #ef4444; }
+        .info-box.warning li::before { content: '💡'; color: #fbbf24; }
+
+        /* ===== COMPARISON TABLE ===== */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            font-size: 0.9rem;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 14px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .comparison-table th {
+            background: var(--bg-secondary);
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-secondary);
+        }
+
+        .comparison-table tr:hover td {
+            background: var(--bg-card-hover);
+        }
+
+        .rating {
+            color: var(--accent-yellow);
+        }
+
+        /* ===== IDE COMPARISON ===== */
+        .ide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .ide-card {
+            background: var(--bg-card);
+            border: 2px solid var(--border-color);
+            border-radius: 16px;
+            padding: 32px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .ide-card.recommended {
+            border-color: var(--accent-cyan);
+        }
+
+        .ide-card.recommended::after {
+            content: '✓ RECOMMANDÉ';
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--accent-cyan);
+            color: var(--bg-primary);
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 4px;
+        }
+
+        .ide-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        }
+
+        .ide-logo {
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+
+        .ide-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .ide-tagline {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .ide-pros, .ide-cons {
+            margin: 16px 0;
+        }
+
+        .ide-pros h4 { color: var(--accent-green); }
+        .ide-cons h4 { color: var(--accent-red); }
+
+        .ide-pros ul, .ide-cons ul {
+            list-style: none;
+            margin-top: 8px;
+        }
+
+        .ide-pros li, .ide-cons li {
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .ide-pros li::before {
+            content: '+';
+            position: absolute;
+            left: 0;
+            color: var(--accent-green);
+            font-weight: bold;
+        }
+
+        .ide-cons li::before {
+            content: '−';
+            position: absolute;
+            left: 0;
+            color: var(--accent-red);
+            font-weight: bold;
+        }
+
+        /* ===== MOTIVATION SECTION ===== */
+        .motivation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 32px;
+        }
+
+        .motivation-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .motivation-card:hover {
+            border-color: rgba(79, 140, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .motivation-icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+
+        .motivation-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .motivation-desc {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        /* ===== TIMELINE ===== */
+        .timeline-horizontal {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+            margin: 40px 0;
+            padding: 20px 0;
+        }
+
+        .timeline-horizontal::before {
+            content: '';
+            position: absolute;
+            top: 50px;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple), var(--accent-red));
+            border-radius: 2px;
+        }
+
+        .timeline-point {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            flex: 1;
+        }
+
+        .timeline-dot {
+            width: 20px;
+            height: 20px;
+            background: var(--accent-cyan);
+            border-radius: 50%;
+            margin: 40px auto 16px;
+            border: 4px solid var(--bg-primary);
+        }
+
+        .timeline-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent-cyan);
+            margin-bottom: 8px;
+        }
+
+        .timeline-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* ===== RESOURCE GRID ===== */
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 24px;
+        }
+
+        .resource-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .resource-card:hover {
+            border-color: rgba(79, 140, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .resource-icon { font-size: 2rem; margin-bottom: 12px; }
+        .resource-title { font-weight: 600; margin-bottom: 8px; }
+        .resource-desc { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 16px; }
+
+        .resource-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .resource-link:hover { text-decoration: underline; }
+
+        /* ===== BUDGET TABLE ===== */
+        .budget-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 24px;
+        }
+
+        .budget-table th,
+        .budget-table td {
+            padding: 14px 18px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .budget-table th {
+            background: var(--bg-secondary);
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-secondary);
+        }
+
+        .budget-table tr:hover td { background: var(--bg-card-hover); }
+
+        .budget-total {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            color: var(--accent-cyan);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            padding: 60px 24px;
+            text-align: center;
+        }
+
+        .footer h2 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+            background: var(--gradient-hero);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .footer p {
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 24px;
+        }
+
+        .footer-badges {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 32px;
+        }
+
+        .footer-badge {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            padding: 8px 16px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-secondary);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .month-grid { grid-template-columns: 1fr; }
+            .ide-grid { grid-template-columns: 1fr; }
+            .timeline-horizontal { flex-direction: column; gap: 20px; }
+            .timeline-horizontal::before { display: none; }
+            .year-tabs { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+    <div class="hero-badge">
+        <span>Plan Complet 3 Ans • v4.0</span>
+    </div>
+    <h1>Embedded Systems<br>Engineer → Japan</h1>
+    <p class="hero-subtitle">CS50 complet → FastBit → FreeRTOS → Linux Embarqué → 日本</p>
+    <div class="hero-japan">🇫🇷 → 🇪🇺 → 🇯🇵</div>
+    <div class="hero-date">📅 Décembre 2025 → Décembre 2028</div>
+
+    <div class="hero-stats">
+        <div class="stat-box">
+            <div class="stat-value">3</div>
+            <div class="stat-label">Années</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">20h</div>
+            <div class="stat-label">Par semaine</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">~3000h</div>
+            <div class="stat-label">Total technique</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">~1400€</div>
+            <div class="stat-label">Budget total</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">N2</div>
+            <div class="stat-label">JLPT cible</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">7.0+</div>
+            <div class="stat-label">IELTS cible</div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="nav">
+    <div class="container">
+        <div class="nav-inner">
+            <a href="#overview" class="nav-link">📋 Vue d'ensemble</a>
+            <a href="#ide" class="nav-link">💻 Choix IDE</a>
+            <a href="#year1" class="nav-link">🎓 Année 1</a>
+            <a href="#year2" class="nav-link">⚡ Année 2</a>
+            <a href="#year3" class="nav-link">🇯🇵 Année 3</a>
+            <a href="#motivation" class="nav-link">🧠 Motivation</a>
+            <a href="#resources" class="nav-link">📚 Ressources</a>
+            <a href="#budget" class="nav-link">💰 Budget</a>
+        </div>
+    </div>
+</nav>
+
+<!-- ===== OVERVIEW ===== -->
+<section id="overview" class="section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Stratégie globale</span>
+            <h2 class="section-title">Parcours en 3 phases</h2>
+            <p class="section-subtitle">Une progression méthodique de débutant à expert prêt pour le Japon</p>
+        </div>
+
+        <div class="timeline-horizontal">
+            <div class="timeline-point">
+                <div class="timeline-label">ANNÉE 1</div>
+                <div class="timeline-dot" style="background: var(--accent-blue);"></div>
+                <div class="timeline-title">Fondations + Emploi Europe</div>
+            </div>
+            <div class="timeline-point">
+                <div class="timeline-label">ANNÉE 2</div>
+                <div class="timeline-dot" style="background: var(--accent-purple);"></div>
+                <div class="timeline-title">Spécialisation + Japonais</div>
+            </div>
+            <div class="timeline-point">
+                <div class="timeline-label">ANNÉE 3</div>
+                <div class="timeline-dot" style="background: var(--accent-red);"></div>
+                <div class="timeline-title">Expert + Transition Japon</div>
+            </div>
+        </div>
+
+        <div class="year-tabs">
+            <div class="year-tab year1">
+                <div class="year-tab-title">🎓 Année 1</div>
+                <div class="year-tab-subtitle">CS50 → FastBit → IELTS → 1er emploi</div>
+            </div>
+            <div class="year-tab year2">
+                <div class="year-tab-title">⚡ Année 2</div>
+                <div class="year-tab-subtitle">Linux Embarqué → IoT → Japonais N4</div>
+            </div>
+            <div class="year-tab year3">
+                <div class="year-tab-title">🇯🇵 Année 3</div>
+                <div class="year-tab-subtitle">Expert → Japonais N2 → Job Japon</div>
+            </div>
+        </div>
+
+        <div class="info-box success">
+            <h3>🎯 Objectifs par année</h3>
+            <ul>
+                <li><strong>Fin Année 1</strong> — CDI Embedded Engineer en Europe (40-55k€), IELTS Band 7+, 5+ projets GitHub</li>
+                <li><strong>Fin Année 2</strong> — Senior/Mid-level, Linux embarqué, JLPT N4, spécialisation automotive/IoT</li>
+                <li><strong>Fin Année 3</strong> — Expert niveau, JLPT N2, offre d'emploi au Japon signée</li>
+            </ul>
+        </div>
+
+        <!-- Tableau comparatif des formations -->
+        <h3 style="margin: 40px 0 20px; text-align: center;">📊 Analyse comparative des formations</h3>
+        <div style="overflow-x: auto;">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Formation</th>
+                        <th>Durée</th>
+                        <th>Prix</th>
+                        <th>Pratique/Théorie</th>
+                        <th>Industrie</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>CS50 Harvard</strong></td>
+                        <td class="mono">150-180h</td>
+                        <td class="mono">Gratuit</td>
+                        <td>60/40</td>
+                        <td><span class="rating">★★★★★</span></td>
+                        <td class="mono">9/10</td>
+                    </tr>
+                    <tr>
+                        <td><strong>UT Austin Embedded</strong></td>
+                        <td class="mono">120-160h</td>
+                        <td class="mono">~150-200$</td>
+                        <td>70/30</td>
+                        <td><span class="rating">★★★★★</span></td>
+                        <td class="mono">9.5/10</td>
+                    </tr>
+                    <tr>
+                        <td><strong>FastBit Embedded C</strong></td>
+                        <td class="mono">16.5h</td>
+                        <td class="mono">10-16$</td>
+                        <td>85/15</td>
+                        <td><span class="rating">★★★★</span></td>
+                        <td class="mono">8.5/10</td>
+                    </tr>
+                    <tr>
+                        <td><strong>FastBit MCU1 Drivers</strong></td>
+                        <td class="mono">16.5h</td>
+                        <td class="mono">10-16$</td>
+                        <td>90/10</td>
+                        <td><span class="rating">★★★★★</span></td>
+                        <td class="mono">9/10</td>
+                    </tr>
+                    <tr>
+                        <td><strong>FastBit ARM Cortex-M</strong></td>
+                        <td class="mono">15h</td>
+                        <td class="mono">10-16$</td>
+                        <td>85/15</td>
+                        <td><span class="rating">★★★★</span></td>
+                        <td class="mono">8.5/10</td>
+                    </tr>
+                    <tr>
+                        <td><strong>FastBit FreeRTOS</strong></td>
+                        <td class="mono">15-17h</td>
+                        <td class="mono">10-16$</td>
+                        <td>80/20</td>
+                        <td><span class="rating">★★★★★</span></td>
+                        <td class="mono">9/10</td>
+                    </tr>
+                    <tr>
+                        <td><strong>FastBit MCU2</strong></td>
+                        <td class="mono">21.5h</td>
+                        <td class="mono">10-16$</td>
+                        <td>85/15</td>
+                        <td><span class="rating">★★★★★</span></td>
+                        <td class="mono">9/10</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Quantum Leaps</strong></td>
+                        <td class="mono">30-50h</td>
+                        <td class="mono">Gratuit</td>
+                        <td>85/15</td>
+                        <td><span class="rating">★★★★</span></td>
+                        <td class="mono">8.5/10</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- ===== IDE CHOICE ===== -->
+<section id="ide" class="section section-alt">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Environnement de développement</span>
+            <h2 class="section-title">💻 VSCode vs CLion : Quel IDE choisir ?</h2>
+            <p class="section-subtitle">Tu as les deux — voici comment les utiliser intelligemment</p>
+        </div>
+
+        <div class="ide-grid">
+            <div class="ide-card recommended">
+                <div class="ide-logo">💙</div>
+                <h3 class="ide-name">VSCode + Extensions</h3>
+                <p class="ide-tagline">Léger, flexible, gratuit — Idéal pour débuter et projets STM32</p>
+                
+                <div class="ide-pros">
+                    <h4>✅ Avantages</h4>
+                    <ul>
+                        <li>100% gratuit et open source</li>
+                        <li>Léger et rapide à lancer (~2s)</li>
+                        <li>Extensions excellentes pour embedded (Cortex-Debug, PlatformIO)</li>
+                        <li>Intégration Git native parfaite</li>
+                        <li>Utilisé par 73% des développeurs (Stack Overflow 2024)</li>
+                        <li>Compatible avec tous les cours (CS50, FastBit)</li>
+                        <li>Terminal intégré puissant</li>
+                    </ul>
+                </div>
+                
+                <div class="ide-cons">
+                    <h4>⚠️ Inconvénients</h4>
+                    <ul>
+                        <li>Nécessite configuration manuelle pour embedded</li>
+                        <li>IntelliSense C/C++ moins précis que CLion</li>
+                        <li>Refactoring basique</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 20px; padding: 16px; background: rgba(0, 212, 170, 0.1); border-radius: 8px;">
+                    <strong style="color: var(--accent-cyan);">📦 Extensions essentielles :</strong>
+                    <p style="font-size: 0.85rem; margin-top: 8px; color: var(--text-secondary);">
+                        C/C++ (Microsoft), Cortex-Debug, PlatformIO IDE, GitLens, CMake Tools
+                    </p>
+                </div>
+            </div>
+
+            <div class="ide-card">
+                <div class="ide-logo">🔷</div>
+                <h3 class="ide-name">CLion</h3>
+                <p class="ide-tagline">IDE professionnel JetBrains — Pour projets C/C++ complexes</p>
+                
+                <div class="ide-pros">
+                    <h4>✅ Avantages</h4>
+                    <ul>
+                        <li>IntelliSense C/C++ le plus précis du marché</li>
+                        <li>Refactoring avancé (renommer, extraire fonction)</li>
+                        <li>Analyse statique intégrée</li>
+                        <li>Débogueur graphique puissant</li>
+                        <li>Support CMake natif excellent</li>
+                        <li>Intégration Valgrind/Sanitizers</li>
+                    </ul>
+                </div>
+                
+                <div class="ide-cons">
+                    <h4>⚠️ Inconvénients</h4>
+                    <ul>
+                        <li>Payant (~200€/an) — gratuit étudiant</li>
+                        <li>Lourd en RAM (2-4 GB)</li>
+                        <li>Lent au démarrage (~10-15s)</li>
+                        <li>Configuration STM32 plus complexe</li>
+                        <li>Overkill pour petits projets</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 20px; padding: 16px; background: rgba(139, 92, 246, 0.1); border-radius: 8px;">
+                    <strong style="color: var(--accent-purple);">💡 Quand utiliser CLion :</strong>
+                    <p style="font-size: 0.85rem; margin-top: 8px; color: var(--text-secondary);">
+                        Projets Linux embarqué (Année 2), refactoring de gros codebase, debug avancé
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box warning" style="margin-top: 32px;">
+            <h3>🎯 Recommandation par phase</h3>
+            <ul>
+                <li><strong>Mois 1-6 (CS50 + FastBit)</strong> — VSCode uniquement. CS50 utilise VS Code, FastBit montre STM32CubeIDE mais VSCode+PlatformIO fonctionne très bien.</li>
+                <li><strong>Mois 7-12 (FreeRTOS + Projets)</strong> — VSCode + Cortex-Debug pour STM32. Tu maîtriseras l'écosystème.</li>
+                <li><strong>Année 2 (Linux Embarqué)</strong> — CLion devient utile pour projets Yocto/Buildroot (gros codebases C).</li>
+                <li><strong>Année 3 (Niveau expert)</strong> — Utilise les deux selon le projet. CLion pour debug complexe, VSCode pour rapidité.</li>
+            </ul>
+        </div>
+
+        <div class="info-box" style="margin-top: 24px;">
+            <h3>⚙️ Setup VSCode pour Embedded (10 min)</h3>
+            <ul>
+                <li><strong>1.</strong> Installe <a href="https://code.visualstudio.com/" style="color: var(--accent-blue);">VSCode</a></li>
+                <li><strong>2.</strong> Extensions : C/C++ (ms-vscode.cpptools), Cortex-Debug, PlatformIO IDE</li>
+                <li><strong>3.</strong> Installe <a href="https://brew.sh" style="color: var(--accent-blue);">Homebrew</a> : <code style="background: var(--bg-secondary); padding: 2px 8px; border-radius: 4px;">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code></li>
+                <li><strong>4.</strong> ARM Toolchain : <code style="background: var(--bg-secondary); padding: 2px 8px; border-radius: 4px;">brew install --cask gcc-arm-embedded</code></li>
+                <li><strong>5.</strong> OpenOCD : <code style="background: var(--bg-secondary); padding: 2px 8px; border-radius: 4px;">brew install openocd</code></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ===== YEAR 1 ===== -->
+<section id="year1" class="section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Année 1 • Déc 2025 → Nov 2026</span>
+            <h2 class="section-title">🎓 Fondations → Premier Emploi Europe</h2>
+            <p class="section-subtitle">CS50 complet + FastBit + FreeRTOS + IELTS = Employable</p>
+        </div>
+
+        <div class="info-box">
+            <h3>📊 Budget horaire Année 1 : 20h/semaine = 80h/mois</h3>
+            <ul>
+                <li><strong>15h/semaine</strong> — Formation technique (cours + pratique)</li>
+                <li><strong>5h/semaine</strong> — IELTS (en parallèle dès le mois 1)</li>
+            </ul>
+        </div>
+
+        <div class="month-grid">
+            <!-- MOIS 1-2 -->
+            <div class="month-card">
+                <div class="month-header">
+                    <span class="month-number">MOIS 1-2</span>
+                    <span class="month-hours">160h total</span>
+                </div>
+                <h3 class="month-title">🎓 CS50 Semaines 0-4 : Fondations C</h3>
+                <div class="month-content">
+                    <span class="course-badge badge-cs50">CS50</span>
+                    <span class="course-badge badge-ielts">IELTS</span>
+                    
+                    <h4>📚 Cours</h4>
+                    <ul>
+                        <li>Week 0 : Scratch (pensée algorithmique)</li>
+                        <li>Week 1 : C (variables, types, conditions)</li>
+                        <li>Week 2 : Arrays (boucles, tableaux, strings)</li>
+                        <li>Week 3 : Algorithms (tri, recherche, Big O)</li>
+                        <li>Week 4 : Memory (pointeurs, malloc, stack/heap)</li>
+                    </ul>
+
+                    <h4>🎯 Compétences acquises</h4>
+                    <ul>
+                        <li>Syntaxe C complète</li>
+                        <li>Pointeurs et allocation mémoire</li>
+                        <li>Algorithmes fondamentaux</li>
+                        <li>Debugging avec debug50</li>
+                    </ul>
+
+                    <h4>🇬🇧 IELTS (10h)</h4>
+                    <ul>
+                        <li>Test diagnostic initial</li>
+                        <li>Vocabulaire académique</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- MOIS 3 -->
+            <div class="month-card">
+                <div class="month-header">
+                    <span class="month-number">MOIS 3</span>
+                    <span class="month-hours">80h</span>
+                </div>
+                <h3 class="month-title">📊 CS50 Semaines 5-6 + Intro Embedded</h3>
+                <div class="month-content">
+                    <span class="course-badge badge-cs50">CS50</span>
+                    <span class="course-badge badge-fastbit">FastBit</span>
+                    
+                    <h4>📚 Cours</h4>
+                    <ul>
+                        <li>Week 5 : Data Structures (linked lists, hash tables, trees)</li>
+                        <li>Week 6 : Python (transition C → Python)</li>
+                        <li>FastBit Embedded C (50%) : 12h</li>
+                    </ul>
+
+                    <h4>🛒 Matériel à acheter</h4>
+                    <ul>
+                        <li>STM32 Nucleo-F446RE : 18€</li>
+                        <li>Kit breadboard + composants : 25€</li>
+                    </ul>
+
+                    <h4>🎯 Compétences</h4>
+                    <ul>
+                        <li>Structures de données avancées</li>
+                        <li>Premier contact STM32CubeIDE</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- MOIS 4 -->
+            <div class="month-card">
+                <div class="month-header">
+                    <span class="month-number">MOIS 4</span>
+                    <span class="month-hours">80h</span>
+                </div>
+                <h3 class="month-title">⚡ Embedded C + UT Austin Part 1</h3>
+                <div class="month-content">
+                    <span class="course-badge badge-fastbit">FastBit</span>
+                    <span class="course-badge" style="background: rgba(191, 87, 0, 0.15); color: #bf5700;">UT Austin</span>
+                    
+                    <h4>📚 Cours</h4>
+                    <ul>
+                        <li>FastBit Embedded C (fin) : 15h</li>
+                        <li>UT Austin Shape the World Part 1 (début) : 20h</li>
+                    </ul>
+
+                    <h4>🛒 Matériel UT Austin</h4>
+                    <ul>
+                        <li>TivaC LaunchPad EK-TM4C123GXL : ~15€</li>
+                    </ul>
+
+                    <h4>🔧 Labs UT Austin</h4>
+                    <ul>
+                        <li>Lab 4: I/O (switches, LEDs)</li>
+                        <li>Lab 5: Finite State Machines</li>
+                    </ul>
+
+                    <h4>🎯 Compétences</h4>
+                    <ul>
+                        <li>Opérations bitwise</li>
+                        <li>GPIO et FSM sur TivaC</li>
+                        <li>Lecture de datasheets TI</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- MOIS 5 -->
+            <div class="month-card">
+                <div class="month-header">
+                    <span class="month-number">MOIS 5</span>
+                    <span class="month-hours">80h</span>
+                </div>
+                <h3 class="month-title">🔧 UT Austin Part 1 + ARM Cortex-M</h3>
+                <div class="month-content">
+                    <span class="course-badge" style="background: rgba(191, 87, 0, 0.15); color: #bf5700;">UT Austin</span>
+                    <span class="course-badge badge-fastbit">FastBit</span>
+                    
+                    <h4>📚 Cours</h4>
+                    <ul>
+                        <li>UT Austin Part 1 (suite) : 25h - Interrupts, DAC</li>
+                        <li>FastBit ARM Cortex-M3/M4 : 15h</li>
+                    </ul>
+
+                    <h4>🔧 Labs UT Austin</h4>
+                    <ul>
+                        <li>Lab 6: DAC et génération de son</li>
+                        <li>Lab 7: Interrupts et SysTick</li>
+                        <li>Lab 8: Switch debouncing</li>
+                    </ul>
+
+                    <h4>🎯 Compétences</h4>
+                    <ul>
+                        <li>Architecture interne Cortex-M</li>
+                        <li>NVIC et gestion interruptions</li>
+                        <li>DAC et génération de signaux</li>
+                        <li>SysTick timer</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- MOIS 6 -->
+            <div class="month-card">
+                <div class="month-header">
+                    <span class="month-number">MOIS 6</span>
+                    <span class="month-hours">80h</span>
+                </div>
+                <h3 class="month-title">📡 Fin UT Austin Part 1 + Drivers</h3>
+                <div class="month-content">
+                    <span class="course-badge" style="background: rgba(191, 87, 0, 0.15); color: #bf5700;">UT Austin</span>
+                    <span class="course-badge badge-fastbit">FastBit MCU1</span>
+                    
+                    <h4>📚 Cours</h4>
+                    <ul>
+                        <li>UT Austin Part 1 (fin) : 15h - ADC, Final project</li>
+                        <li>FastBit MCU1 (début) : 15h</li>
+                    </ul>
+
+                    <h4>🛒 Matériel STM32</h4>
+                    <ul>
+                        <li>STM32 Nucleo-F446RE : 18€</li>
+                        <li>Analyseur logique clone : 15€</li>
+                        <li>Capteur DHT22 I2C : 8€</li>
+                        <li>Écran OLED SPI : 8€</li>
+                    </ul>
+
+                    <h4>🏆 Projet UT Austin : Space Invaders</h4>
+                    <ul>
+                        <li>ADC pour joystick</li>
+                        <li>DAC pour son</li>
+                        <li>Écran Nokia LCD</li>
+                    </ul>
+
+                    <h4>🎯 Compétences</h4>
+                    <ul>
+                        <li>ADC et acquisition analogique</li>
+                        <li>Projet complet intégré</li>
+                        <li>Début drivers professionnels</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- MOIS 7 -->
+            <div class="month-card">
+                <div class="month-header">
+                    <span class="month-number">MOIS 7</span>
+                    <span class="month-hours">80h</span>
+                </div>
+                <h3 class="month-title">🚀 MCU1 + UT Austin Part 2</h3>
+                <div class="month-content">
+                    <span class="course-badge badge-fastbit">FastBit MCU1</span>
+                    <span class="course-badge" style="background: rgba(191, 87, 0, 0.15); color: #bf5700;">UT Austin P2</span>
+                    
+                    <h4>📚 Cours</h4>
+                    <ul>
+                        <li>FastBit MCU1 (suite) : 15h - SPI, I2C</li>
+                        <li>UT Austin Part 2 (début) : 20h - Multi-threaded</li>
+                    </ul>
+
+                    <h4>🔧 Labs UT Austin Part 2</h4>
+                    <ul>
+                        <li>Lab 1: Cooperative multitasking</li>
+                        <li>Lab 2: Thread communication</li>
+                    </ul>
+
+                    <h4>🏆 Projet Portfolio #1 : Station météo</h4>
+                    <ul>
+                        <li>Capteurs température/humidité (I2C)</li>
+                        <li>Affichage OLED (SPI)</li>
+                        <li>Documentation GitHub complète</li>
+                    </ul>
+
+                    <h4>🎯 Compétences</h4>
+                    <ul>
+                        <li>Drivers SPI/I2C from scratch</li>
+                        <li>Introduction au multitâche</li>
+                        <li>Premier projet portfolio</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- MOIS 8 -->
+            <div class="month-card">
+                <div class="month-header">
+                    <span class="month-number">MOIS 8</span>
+                    <span class="month-hours">80h</span>
+                </div>
+                <h3 class="month-title">⏱️ UT Austin Part 2 + FreeRTOS</h3>
+                <div class="month-content">
+                    <span class="course-badge" style="background: rgba(191, 87, 0, 0.15); color: #bf5700;">UT Austin P2</span>
+                    <span class="course-badge badge-rtos">FreeRTOS</span>
+                    
+                    <h4>📚 Cours</h4>
+                    <ul>
+                        <li>UT Austin Part 2 (suite) : 20h - RTOS concepts</li>
+                        <li>FastBit FreeRTOS (début) : 15h</li>
+                    </ul>
+
+                    <h4>🔧 Labs UT Austin Part 2</h4>
+                    <ul>
+                        <li>Lab 3: Blocking semaphores</li>
+                        <li>Lab 4: Priority scheduler</li>
+                        <li>Lab 5: File system</li>
+                    </ul>
+
+                    <h4>🎯 Compétences</h4>
+                    <ul>
+                        <li>Sémaphores et mutex</li>
+                        <li>Scheduling et priorités</li>
+                        <li>FreeRTOS task creation</li>
+                        <li>Context switching</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- MOIS 9 -->
+            <div class="month-card">
+                <div class="month-header">
+                    <span class="month-number">MOIS 9</span>
+                    <span class="month-hours">80h</span>
+                </div>
+                <h3 class="month-title">⚙️ Fin UT Austin P2 + MCU2</h3>
+                <div class="month-content">
+                    <span class="course-badge" style="background: rgba(191, 87, 0, 0.15); color: #bf5700;">UT Austin P2</span>
+                    <span class="course-badge badge-fastbit">FastBit MCU2</span>
+                    <span class="course-badge badge-project">Portfolio</span>
+                    
+                    <h4>📚 Cours</h4>
+                    <ul>
+                        <li>UT Austin Part 2 (fin) : 20h - Final labs</li>
+                        <li>FastBit MCU2 (début) : 15h - Timers, PWM</li>
+                    </ul>
+
+                    <h4>🏆 Projet Portfolio #2 : Contrôleur moteur DC</h4>
+                    <ul>
+                        <li>PWM pour contrôle vitesse</li>
+                        <li>Encodeur pour feedback position</li>
+                        <li>PID control basique</li>
+                        <li>Interface utilisateur (boutons + écran)</li>
+                    </ul>
+
+                    <h4>🎯 Compétences</h4>
+                    <ul>
+                        <li>RTOS complet (UT Austin)</li>
+                        <li>Configuration timers avancés</li>
+                        <li>Génération PWM</li>
+                        <li>Contrôle moteur</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- MOIS 10 -->
+            <div class="month-card">
+                <div class="month-header">
+                    <span class="month-number">MOIS 10</span>
+                    <span class="month-hours">80h</span>
+                </div>
+                <h3 class="month-title">🔋 MCU2 Avancé + FreeRTOS</h3>
+                <div class="month-content">
+                    <span class="course-badge badge-fastbit">FastBit MCU2</span>
+                    <span class="course-badge badge-rtos">FreeRTOS</span>
+                    <span class="course-badge badge-project">Portfolio</span>
+                    
+                    <h4>📚 Cours</h4>
+                    <ul>
+                        <li>FastBit MCU2 (suite) : 15h - CAN, Low Power</li>
+                        <li>FastBit FreeRTOS (avancé) : 10h</li>
+                        <li>Quantum Leaps (state machines) : 10h</li>
+                    </ul>
+
+                    <h4>🏆 Projet Portfolio #3 : Système IoT basse conso</h4>
+                    <ul>
+                        <li>Deep sleep avec wakeup timer</li>
+                        <li>Mesures périodiques de capteurs</li>
+                        <li>FreeRTOS multi-tâches</li>
+                        <li>Optimisation consommation</li>
+                    </ul>
+
+                    <h4>🎯 Compétences</h4>
+                    <ul>
+                        <li>Protocole CAN bus</li>
+                        <li>Modes basse consommation</li>
+                        <li>State machines</li>
+                        <li>Design pour batterie</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- MOIS 11 -->
+            <div class="month-card">
+                <div class="month-header">
+                    <span class="month-number">MOIS 11</span>
+                    <span class="month-hours">80h</span>
+                </div>
+                <h3 class="month-title">🏆 Portfolio Intensif + IELTS</h3>
+                <div class="month-content">
+                    <span class="course-badge badge-project">Portfolio</span>
+                    <span class="course-badge badge-ielts">IELTS</span>
+                    
+                    <h4>🔧 Activités</h4>
+                    <ul>
+                        <li>Projet Portfolio #4 : USB HID device</li>
+                        <li>Documentation et vidéos démo</li>
+                        <li>CV et LinkedIn optimisés</li>
+                    </ul>
+
+                    <h4>📋 GitHub Portfolio checklist</h4>
+                    <ul>
+                        <li>README détaillé avec schémas</li>
+                        <li>Photos et vidéo démo</li>
+                        <li>Code commenté proprement</li>
+                        <li>Licence MIT</li>
+                    </ul>
+
+                    <h4>🇬🇧 IELTS : Passage examen (mi-novembre)</h4>
+                </div>
+            </div>
+
+            <!-- MOIS 12 -->
+            <div class="month-card">
+                <div class="month-header">
+                    <span class="month-number">MOIS 12</span>
+                    <span class="month-hours">80h</span>
+                </div>
+                <h3 class="month-title">💼 Préparation Emploi</h3>
+                <div class="month-content">
+                    <span class="course-badge badge-project">Job Hunt</span>
+                    
+                    <h4>🔧 Activités</h4>
+                    <ul>
+                        <li>Révision concepts clés : 20h</li>
+                        <li>Mock interviews : 15h</li>
+                        <li>Applications et networking : 20h</li>
+                    </ul>
+
+                    <h4>📋 Préparation entretiens</h4>
+                    <ul>
+                        <li>Questions pointeurs, mémoire, debug</li>
+                        <li>Exercices de code en direct</li>
+                        <li>Questions architecture embarquée</li>
+                        <li>Présentation de projets</li>
+                    </ul>
+
+                    <h4>🎯 Objectif : CDI signé 40-55k€</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box success" style="margin-top: 32px;">
+            <h3>✅ Compétences fin Année 1</h3>
+            <ul>
+                <li>C/C++ embarqué professionnel</li>
+                <li>STM32 et ARM Cortex-M maîtrisés (TivaC + STM32)</li>
+                <li>Drivers GPIO, UART, SPI, I2C, timers from scratch</li>
+                <li>FreeRTOS + RTOS concepts (UT Austin Part 2)</li>
+                <li>UT Austin Shape the World Part 1 & 2 complétés</li>
+                <li>5+ projets documentés sur GitHub</li>
+                <li>IELTS Band 7+ validé</li>
+                <li>CDI Embedded Engineer en Europe</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ===== YEAR 2 ===== -->
+<section id="year2" class="section section-alt">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Année 2 • Déc 2026 → Nov 2027</span>
+            <h2 class="section-title">⚡ Spécialisation + Japonais</h2>
+            <p class="section-subtitle">Linux Embarqué • Automotive • IoT • JLPT N4</p>
+        </div>
+
+        <div class="info-box purple">
+            <h3>📊 Budget horaire Année 2 : 20h/semaine</h3>
+            <ul>
+                <li><strong>10h/semaine</strong> — Technique avancé</li>
+                <li><strong>8h/semaine</strong> — Japonais</li>
+                <li><strong>2h/semaine</strong> — Veille technologique</li>
+            </ul>
+        </div>
+
+        <div class="month-grid">
+            <!-- T1 -->
+            <div class="month-card">
+                <div class="month-header">
+                    <span class="month-number">T1 (Mois 13-15)</span>
+                    <span class="month-hours">240h</span>
+                </div>
+                <h3 class="month-title">🐧 Linux Embarqué</h3>
+                <div class="month-content">
+                    <span class="course-badge badge-linux">Linux</span>
+                    <span class="course-badge badge-japan">日本語</span>
+                    
+                    <h4>📚 Cours</h4>
+                    <ul>
+                        <li>FastBit Embedded Linux (BeagleBone) : 15h</li>
+                        <li>Linux Device Drivers : 15h</li>
+                        <li>CU Boulder Advanced Embedded Linux : 20h</li>
+                    </ul>
+
+                    <h4>🎯 Compétences</h4>
+                    <ul>
+                        <li>Cross-compilation</li>
+                        <li>Yocto/Buildroot basics</li>
+                        <li>Device tree</li>
+                        <li>Kernel modules simples</li>
+                    </ul>
+
+                    <h4>🇯🇵 Japonais (100h)</h4>
+                    <ul>
+                        <li>Hiragana, Katakana maîtrisés</li>
+                        <li>200 kanji</li>
+                        <li>Genki I</li>
+                        <li>Niveau visé : JLPT N5</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- T2 -->
+            <div class="month-card">
+                <div class="month-header">
+                    <span class="month-number">T2 (Mois 16-18)</span>
+                    <span class="month-hours">240h</span>
+                </div>
+                <h3 class="month-title">🚗 Automotive & Sécurité</h3>
+                <div class="month-content">
+                    <span class="course-badge badge-fastbit">Automotive</span>
+                    <span class="course-badge badge-japan">日本語</span>
+                    
+                    <h4>📚 Cours</h4>
+                    <ul>
+                        <li>Protocoles automotive (CAN-FD, LIN)</li>
+                        <li>Introduction AUTOSAR</li>
+                        <li>Sécurité embedded (secure boot, crypto)</li>
+                    </ul>
+
+                    <h4>🏆 Projet : OBD-II reader avec STM32</h4>
+
+                    <h4>🇯🇵 Japonais (100h)</h4>
+                    <ul>
+                        <li>Genki II</li>
+                        <li>500 kanji</li>
+                        <li>Niveau visé : Entre N5 et N4</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- T3 -->
+            <div class="month-card">
+                <div class="month-header">
+                    <span class="month-number">T3 (Mois 19-21)</span>
+                    <span class="month-hours">240h</span>
+                </div>
+                <h3 class="month-title">📡 IoT & Wireless</h3>
+                <div class="month-content">
+                    <span class="course-badge badge-fastbit">IoT</span>
+                    <span class="course-badge badge-japan">日本語</span>
+                    
+                    <h4>📚 Cours</h4>
+                    <ul>
+                        <li>BLE avec nRF52 ou ESP32</li>
+                        <li>WiFi embedded</li>
+                        <li>Protocoles IoT (MQTT, CoAP)</li>
+                    </ul>
+
+                    <h4>🏆 Projet : Capteur IoT avec BLE + cloud</h4>
+
+                    <h4>🇯🇵 Japonais (100h)</h4>
+                    <ul>
+                        <li>Tobira (intermédiaire)</li>
+                        <li>800 kanji</li>
+                        <li>Niveau visé : JLPT N4</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- T4 -->
+            <div class="month-card">
+                <div class="month-header">
+                    <span class="month-number">T4 (Mois 22-24)</span>
+                    <span class="month-hours">240h</span>
+                </div>
+                <h3 class="month-title">🏆 Consolidation Expert</h3>
+                <div class="month-content">
+                    <span class="course-badge badge-project">Open Source</span>
+                    <span class="course-badge badge-japan">JLPT N4</span>
+                    
+                    <h4>🔧 Activités</h4>
+                    <ul>
+                        <li>Contribution open-source</li>
+                        <li>Blog technique</li>
+                        <li>Préparation JLPT N4 intensive</li>
+                    </ul>
+
+                    <h4>🇯🇵 Japonais (100h)</h4>
+                    <ul>
+                        <li>Préparation examen</li>
+                        <li>1000 kanji</li>
+                    </ul>
+
+                    <h4>🎯 Décembre Année 2 : Passage JLPT N4</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== YEAR 3 ===== -->
+<section id="year3" class="section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Année 3 • Déc 2027 → Nov 2028</span>
+            <h2 class="section-title">🇯🇵 Expert + Transition Japon</h2>
+            <p class="section-subtitle">Niveau senior • JLPT N2 • Offre d'emploi signée</p>
+        </div>
+
+        <div class="info-box" style="border-color: rgba(220, 38, 38, 0.3); background: rgba(220, 38, 38, 0.05);">
+            <h3>📊 Budget horaire Année 3 : 20h/semaine</h3>
+            <ul>
+                <li><strong>8h/semaine</strong> — Technique expert</li>
+                <li><strong>10h/semaine</strong> — Japonais intensif</li>
+                <li><strong>2h/semaine</strong> — Job search Asie</li>
+            </ul>
+        </div>
+
+        <div class="month-grid">
+            <!-- T1 -->
+            <div class="month-card" style="border-top-color: var(--accent-red);">
+                <div class="month-header">
+                    <span class="month-number">T1 (Mois 25-27)</span>
+                    <span class="month-hours">240h</span>
+                </div>
+                <h3 class="month-title">🎯 Spécialisation Ciblée</h3>
+                <div class="month-content">
+                    <h4>🇯🇵 Focus Japon (Automotive)</h4>
+                    <ul>
+                        <li>ADAS (systèmes d'aide à la conduite)</li>
+                        <li>AUTOSAR approfondissement</li>
+                        <li>Functional safety (ISO 26262)</li>
+                    </ul>
+
+                    <h4>🇯🇵 Japonais (130h)</h4>
+                    <ul>
+                        <li>Shin Kanzen Master N3</li>
+                        <li>1500 kanji</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- T2 -->
+            <div class="month-card" style="border-top-color: var(--accent-red);">
+                <div class="month-header">
+                    <span class="month-number">T2 (Mois 28-30)</span>
+                    <span class="month-hours">240h</span>
+                </div>
+                <h3 class="month-title">🏆 Expertise Industrie</h3>
+                <div class="month-content">
+                    <h4>🔧 Activités</h4>
+                    <ul>
+                        <li>Certifications vendeur (ST, TI)</li>
+                        <li>Projets reproduisant use cases industriels</li>
+                        <li>Portfolio vidéo professionnel</li>
+                    </ul>
+
+                    <h4>🇯🇵 Japonais (130h) : N3 → N2 transition</h4>
+                    <h4>🎯 Juillet Année 3 : Passage JLPT N3</h4>
+                </div>
+            </div>
+
+            <!-- T3 -->
+            <div class="month-card" style="border-top-color: var(--accent-red);">
+                <div class="month-header">
+                    <span class="month-number">T3 (Mois 31-33)</span>
+                    <span class="month-hours">240h</span>
+                </div>
+                <h3 class="month-title">💼 Job Search Actif</h3>
+                <div class="month-content">
+                    <h4>🎯 Applications</h4>
+                    <ul>
+                        <li>Mercari, Rakuten (anglais OK)</li>
+                        <li>Woven by Toyota</li>
+                        <li>Sony (divisions internationales)</li>
+                        <li>PayPay, SmartNews</li>
+                    </ul>
+
+                    <h4>📋 Préparation</h4>
+                    <ul>
+                        <li>Visa Engineer/HSP</li>
+                        <li>CV format japonais (rirekisho)</li>
+                        <li>Entretiens techniques en anglais</li>
+                    </ul>
+
+                    <h4>🇯🇵 Japonais (130h) : Préparation N2 intensive</h4>
+                </div>
+            </div>
+
+            <!-- T4 -->
+            <div class="month-card" style="border-top-color: var(--accent-red);">
+                <div class="month-header">
+                    <span class="month-number">T4 (Mois 34-36)</span>
+                    <span class="month-hours">240h</span>
+                </div>
+                <h3 class="month-title">🎌 Transition Finale</h3>
+                <div class="month-content">
+                    <h4>🔧 Activités</h4>
+                    <ul>
+                        <li>Entretiens finaux</li>
+                        <li>Négociation contrat et visa</li>
+                        <li>Préparation déménagement</li>
+                    </ul>
+
+                    <h4>🎯 Décembre Année 3 : Passage JLPT N2</h4>
+                    <h4>🇯🇵 Début Année 4 : Départ pour le Japon !</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- Entreprises cibles -->
+        <div class="info-box success" style="margin-top: 32px;">
+            <h3>🏢 Entreprises cibles au Japon (acceptant l'anglais)</h3>
+            <ul>
+                <li><strong>Mercari</strong> — Tech/E-commerce — Japonais non requis</li>
+                <li><strong>Rakuten</strong> — Tech/E-commerce — Japonais non requis</li>
+                <li><strong>PayPay</strong> — Fintech — Japonais non requis</li>
+                <li><strong>Woven by Toyota</strong> — Automotive/Software — N3 préféré</li>
+                <li><strong>Sony (global)</strong> — Électronique — N3 préféré</li>
+                <li><strong>LINE/LY Corp</strong> — Messagerie — N3 préféré</li>
+                <li><strong>SmartNews</strong> — AI/Media — Japonais non requis</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ===== MOTIVATION ===== -->
+<section id="motivation" class="section section-alt">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Psychologie de l'apprentissage</span>
+            <h2 class="section-title">🧠 Rester Motivé et Discipliné sur 3 Ans</h2>
+            <p class="section-subtitle">Les stratégies scientifiquement prouvées pour tenir la distance</p>
+        </div>
+
+        <div class="motivation-grid">
+            <div class="motivation-card">
+                <div class="motivation-icon">🎯</div>
+                <h4 class="motivation-title">1. Objectifs SMART mensuels</h4>
+                <p class="motivation-desc">
+                    Décompose le plan en micro-objectifs mesurables. "Terminer CS50 Week 4" est plus motivant que "apprendre l'embarqué". 
+                    Coche physiquement chaque objectif atteint — le cerveau adore les récompenses visuelles.
+                </p>
+            </div>
+
+            <div class="motivation-card">
+                <div class="motivation-icon">📅</div>
+                <h4 class="motivation-title">2. Horaire fixe non-négociable</h4>
+                <p class="motivation-desc">
+                    Bloque les mêmes créneaux chaque semaine. La discipline bat la motivation à long terme. 
+                    Exemple : Lundi-Vendredi 19h-22h + Samedi 9h-12h. Traite ces heures comme un rendez-vous médical — on ne les annule pas.
+                </p>
+            </div>
+
+            <div class="motivation-card">
+                <div class="motivation-icon">⏱️</div>
+                <h4 class="motivation-title">3. Technique Pomodoro</h4>
+                <p class="motivation-desc">
+                    25 minutes de focus intense, 5 minutes de pause. Après 4 cycles, 15-30 min de pause longue. 
+                    L'app "Forest" gamifie le processus. Le cerveau ne peut pas rester concentré plus de 90 minutes — respecte ses limites.
+                </p>
+            </div>
+
+            <div class="motivation-card">
+                <div class="motivation-icon">🏆</div>
+                <h4 class="motivation-title">4. Récompenses par jalon</h4>
+                <p class="motivation-desc">
+                    CS50 terminé ? Un bon restaurant. Premier projet GitHub ? Un gadget électronique. IELTS réussi ? Weekend détente. 
+                    Le système de récompense dopaminergique renforce les comportements positifs.
+                </p>
+            </div>
+
+            <div class="motivation-card">
+                <div class="motivation-icon">👥</div>
+                <h4 class="motivation-title">5. Accountability partner</h4>
+                <p class="motivation-desc">
+                    Trouve quelqu'un (ami, collègue, communauté Discord) à qui tu rapportes tes progrès hebdomadaires. 
+                    La pression sociale positive augmente de 65% les chances de compléter un objectif (American Society of Training and Development).
+                </p>
+            </div>
+
+            <div class="motivation-card">
+                <div class="motivation-icon">📊</div>
+                <h4 class="motivation-title">6. Tracker visuel de progrès</h4>
+                <p class="motivation-desc">
+                    Un tableau Notion/Trello avec les cours cochés, un calendrier avec les jours d'étude marqués (chaîne ininterrompue), 
+                    ou simplement un fichier Excel. Voir le progrès accumlé est puissant.
+                </p>
+            </div>
+
+            <div class="motivation-card">
+                <div class="motivation-icon">🧘</div>
+                <h4 class="motivation-title">7. Gestion de l'énergie</h4>
+                <p class="motivation-desc">
+                    Étudie quand ton énergie est maximale (souvent le matin pour la créativité, soir pour la pratique répétitive). 
+                    Sommeil 7-8h, exercice régulier, alimentation équilibrée — le cerveau a besoin de carburant.
+                </p>
+            </div>
+
+            <div class="motivation-card">
+                <div class="motivation-icon">🔄</div>
+                <h4 class="motivation-title">8. Système > Motivation</h4>
+                <p class="motivation-desc">
+                    La motivation fluctue, les systèmes perdurent. Au lieu de "Je vais étudier quand j'ai envie", 
+                    crée un rituel : "Après le dîner, je m'assois 5 min à mon bureau avec le café". L'action déclenche la motivation, pas l'inverse.
+                </p>
+            </div>
+        </div>
+
+        <div class="info-box critical" style="margin-top: 32px;">
+            <h3>⚠️ Les pièges à éviter</h3>
+            <ul>
+                <li><strong>Tutorial Hell</strong> — Regarder des vidéos sans coder. Règle : 1h de vidéo = 2h de pratique minimum.</li>
+                <li><strong>Perfectionnisme</strong> — "Mon projet n'est pas parfait" → publie-le quand même. Itère ensuite.</li>
+                <li><strong>Comparaison</strong> — Untel a appris en 6 mois ? Son contexte n'est pas le tien. Compare-toi à ton toi d'hier.</li>
+                <li><strong>Surcharge</strong> — 20h/semaine est le max soutenable avec un job. Au-delà, risque de burnout.</li>
+                <li><strong>Isolation</strong> — Rejoins Discord FastBit, Reddit r/embedded, meetups locaux. L'humain a besoin de communauté.</li>
+            </ul>
+        </div>
+
+        <div class="info-box warning" style="margin-top: 24px;">
+            <h3>💡 Techniques anti-procrastination</h3>
+            <ul>
+                <li><strong>Règle des 2 minutes</strong> — Si une tâche prend moins de 2 min, fais-la maintenant.</li>
+                <li><strong>Règle des 5 minutes</strong> — Commence juste 5 min. L'inertie du démarrage est le plus dur ; une fois lancé, on continue souvent.</li>
+                <li><strong>Mise en place facile</strong> — Laisse VSCode ouvert sur ton bureau, le cours prêt. Réduis la friction au maximum.</li>
+                <li><strong>Environnement dédié</strong> — Si possible, un espace physique uniquement pour l'étude. Le cerveau associe lieu et activité.</li>
+                <li><strong>Blocage des distractions</strong> — Apps comme Freedom, Cold Turkey pour bloquer réseaux sociaux pendant les sessions.</li>
+            </ul>
+        </div>
+
+        <div class="info-box success" style="margin-top: 24px;">
+            <h3>✅ Routine quotidienne recommandée</h3>
+            <ul>
+                <li><strong>Matin (avant travail)</strong> — 30 min japonais/IELTS (Anki, Duolingo). Cerveau frais = meilleure mémorisation.</li>
+                <li><strong>Pause déjeuner</strong> — 15 min de lecture technique (article, documentation).</li>
+                <li><strong>Soir (19h-22h)</strong> — 2-3h de cours/pratique embedded. Sessions Pomodoro.</li>
+                <li><strong>Weekend (Samedi matin)</strong> — Session projet longue (3-4h). Le flow créatif a besoin de temps.</li>
+                <li><strong>Dimanche</strong> — Repos ou révision légère. La récupération est partie de l'apprentissage.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ===== RESOURCES ===== -->
+<section id="resources" class="section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Liens</span>
+            <h2 class="section-title">📚 Ressources Essentielles</h2>
+        </div>
+
+        <h3 style="margin: 30px 0 20px; color: var(--accent-blue);">🎓 Cours Principaux</h3>
+        <div class="resource-grid">
+            <div class="resource-card">
+                <div class="resource-icon">🏛️</div>
+                <h4 class="resource-title">CS50 Harvard</h4>
+                <p class="resource-desc">Le cours d'intro le plus réputé. Gratuit.</p>
+                <a href="https://cs50.harvard.edu/x/2024/" target="_blank" class="resource-link">cs50.harvard.edu →</a>
+            </div>
+            <div class="resource-card" style="border-color: rgba(191, 87, 0, 0.3);">
+                <div class="resource-icon">🔥</div>
+                <h4 class="resource-title">UT Austin Embedded</h4>
+                <p class="resource-desc">Shape the World Part 1 & 2. Standard industriel ARM. Le meilleur cours embedded.</p>
+                <a href="https://www.edx.org/learn/embedded-systems/the-university-of-texas-at-austin-embedded-systems-shape-the-world-microcontroller-input-output" target="_blank" class="resource-link">edx.org Part 1 →</a>
+            </div>
+            <div class="resource-card">
+                <div class="resource-icon">⚡</div>
+                <h4 class="resource-title">FastBit Academy</h4>
+                <p class="resource-desc">Série complète MCU + FreeRTOS. ~10€/cours en solde.</p>
+                <a href="https://www.udemy.com/user/kaborelnana/" target="_blank" class="resource-link">udemy.com →</a>
+            </div>
+        </div>
+
+        <h3 style="margin: 40px 0 20px; color: var(--accent-purple);">📺 YouTube</h3>
+        <div class="resource-grid">
+            <div class="resource-card">
+                <div class="resource-icon">🎬</div>
+                <h4 class="resource-title">Phil's Lab</h4>
+                <p class="resource-desc">STM32 pro, PCB, FreeRTOS.</p>
+                <a href="https://www.youtube.com/@PhilsLab" target="_blank" class="resource-link">YouTube →</a>
+            </div>
+            <div class="resource-card">
+                <div class="resource-icon">🎬</div>
+                <h4 class="resource-title">Quantum Leaps</h4>
+                <p class="resource-desc">Machines à états, C embarqué avancé.</p>
+                <a href="https://www.youtube.com/@StateMachineCOM" target="_blank" class="resource-link">YouTube →</a>
+            </div>
+            <div class="resource-card">
+                <div class="resource-icon">🎬</div>
+                <h4 class="resource-title">Low Level Learning</h4>
+                <p class="resource-desc">Concepts bas niveau expliqués simplement.</p>
+                <a href="https://www.youtube.com/@LowLevelLearning" target="_blank" class="resource-link">YouTube →</a>
+            </div>
+        </div>
+
+        <h3 style="margin: 40px 0 20px; color: var(--accent-green);">🇬🇧 IELTS</h3>
+        <div class="resource-grid">
+            <div class="resource-card">
+                <div class="resource-icon">📚</div>
+                <h4 class="resource-title">IELTS Liz</h4>
+                <p class="resource-desc">300+ pages gratuites, stratégies Band 7+.</p>
+                <a href="https://ieltsliz.com/" target="_blank" class="resource-link">ieltsliz.com →</a>
+            </div>
+            <div class="resource-card">
+                <div class="resource-icon">🎓</div>
+                <h4 class="resource-title">Coursera UC Irvine</h4>
+                <p class="resource-desc">Spécialisation IELTS complète.</p>
+                <a href="https://www.coursera.org/specializations/ielts-preparation" target="_blank" class="resource-link">coursera.org →</a>
+            </div>
+            <div class="resource-card">
+                <div class="resource-icon">📝</div>
+                <h4 class="resource-title">British Council</h4>
+                <p class="resource-desc">Tests pratiques officiels gratuits.</p>
+                <a href="https://takeielts.britishcouncil.org/take-ielts/prepare/ielts-ready" target="_blank" class="resource-link">britishcouncil.org →</a>
+            </div>
+        </div>
+
+        <h3 style="margin: 40px 0 20px; color: var(--accent-red);">🇯🇵 Japonais</h3>
+        <div class="resource-grid">
+            <div class="resource-card">
+                <div class="resource-icon">🦀</div>
+                <h4 class="resource-title">WaniKani</h4>
+                <p class="resource-desc">Kanji + vocabulaire par SRS. ~90€/an.</p>
+                <a href="https://www.wanikani.com/" target="_blank" class="resource-link">wanikani.com →</a>
+            </div>
+            <div class="resource-card">
+                <div class="resource-icon">📖</div>
+                <h4 class="resource-title">Genki (manuels)</h4>
+                <p class="resource-desc">Standard académique N5-N4.</p>
+                <a href="https://genki3.japantimes.co.jp/en/" target="_blank" class="resource-link">japantimes.co.jp →</a>
+            </div>
+            <div class="resource-card">
+                <div class="resource-icon">🎴</div>
+                <h4 class="resource-title">Anki</h4>
+                <p class="resource-desc">Flashcards SRS gratuit. Decks JLPT disponibles.</p>
+                <a href="https://apps.ankiweb.net/" target="_blank" class="resource-link">ankiweb.net →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== BUDGET ===== -->
+<section id="budget" class="section section-alt">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Investissement</span>
+            <h2 class="section-title">💰 Budget Total sur 3 Ans</h2>
+            <p class="section-subtitle">~1 400€ pour une transformation de carrière complète</p>
+        </div>
+
+        <div class="info-box">
+            <table class="budget-table">
+                <thead>
+                    <tr>
+                        <th>Catégorie</th>
+                        <th>Détail</th>
+                        <th>Coût</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td colspan="3" style="background: var(--bg-secondary); color: var(--accent-blue); font-weight: 600;">📚 Formations</td></tr>
+                    <tr>
+                        <td>CS50 Harvard</td>
+                        <td>Gratuit (certificat Harvard)</td>
+                        <td class="mono">0€</td>
+                    </tr>
+                    <tr>
+                        <td>FastBit Bundle</td>
+                        <td>6-8 cours @ 12€ en solde</td>
+                        <td class="mono">80-100€</td>
+                    </tr>
+                    <tr>
+                        <td>UT Austin edX</td>
+                        <td>2 certificats (optionnel)</td>
+                        <td class="mono">150-180€</td>
+                    </tr>
+                    <tr>
+                        <td>Coursera</td>
+                        <td>3 mois subscription (optionnel)</td>
+                        <td class="mono">120€</td>
+                    </tr>
+
+                    <tr><td colspan="3" style="background: var(--bg-secondary); color: var(--accent-purple); font-weight: 600;">🔧 Hardware</td></tr>
+                    <tr>
+                        <td>STM32 Nucleo-F446RE</td>
+                        <td>Carte de développement principale</td>
+                        <td class="mono">18€</td>
+                    </tr>
+                    <tr>
+                        <td>TivaC LaunchPad (UT Austin)</td>
+                        <td>EK-TM4C123GXL pour cours UT Austin</td>
+                        <td class="mono">15€</td>
+                    </tr>
+                    <tr>
+                        <td>Kit composants</td>
+                        <td>LEDs, résistances, breadboard, fils</td>
+                        <td class="mono">30€</td>
+                    </tr>
+                    <tr>
+                        <td>Capteurs</td>
+                        <td>DHT22, MPU6050, OLED, etc.</td>
+                        <td class="mono">35€</td>
+                    </tr>
+                    <tr>
+                        <td>Analyseur logique</td>
+                        <td>USB 8 canaux clone</td>
+                        <td class="mono">15€</td>
+                    </tr>
+                    <tr>
+                        <td>BeagleBone Black</td>
+                        <td>Pour Linux embarqué (Année 2)</td>
+                        <td class="mono">55€</td>
+                    </tr>
+
+                    <tr><td colspan="3" style="background: var(--bg-secondary); color: var(--accent-green); font-weight: 600;">🇬🇧 IELTS</td></tr>
+                    <tr>
+                        <td>Inscription examen</td>
+                        <td>British Council</td>
+                        <td class="mono">245€</td>
+                    </tr>
+                    <tr>
+                        <td>Matériel préparation</td>
+                        <td>Cambridge books</td>
+                        <td class="mono">40€</td>
+                    </tr>
+
+                    <tr><td colspan="3" style="background: var(--bg-secondary); color: var(--accent-red); font-weight: 600;">🇯🇵 Japonais</td></tr>
+                    <tr>
+                        <td>Genki I + II + workbooks</td>
+                        <td>Manuels standard</td>
+                        <td class="mono">100€</td>
+                    </tr>
+                    <tr>
+                        <td>Tobira + Shin Kanzen</td>
+                        <td>Niveau intermédiaire-avancé</td>
+                        <td class="mono">125€</td>
+                    </tr>
+                    <tr>
+                        <td>WaniKani (1 an)</td>
+                        <td>Kanji par SRS</td>
+                        <td class="mono">90€</td>
+                    </tr>
+                    <tr>
+                        <td>JLPT inscriptions</td>
+                        <td>N4 + N3 + N2</td>
+                        <td class="mono">180€</td>
+                    </tr>
+
+                    <tr style="background: rgba(0, 212, 170, 0.1);">
+                        <td><strong>TOTAL</strong></td>
+                        <td></td>
+                        <td class="budget-total" style="font-size: 1.3rem;">~1 415€</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="info-box warning" style="margin-top: 24px;">
+            <h3>💡 Conseils économiques</h3>
+            <ul>
+                <li><strong>Udemy</strong> — Attends les soldes (quasi-mensuelles) pour payer ~10-15€ au lieu de 50-100€</li>
+                <li><strong>Coursera</strong> — L'option "audit" donne accès gratuit au contenu (sans certificat)</li>
+                <li><strong>Hardware</strong> — Amazon.de souvent moins cher que .fr pour l'électronique</li>
+                <li><strong>Livres japonais</strong> — Versions PDF moins chères, mais le papier aide la mémorisation</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <h2>🇫🇷 → 🇪🇺 → 🇯🇵</h2>
+    <p>
+        3 ans de formation méthodique = Expert Embedded + JLPT N2 + Offre au Japon<br>
+        De Documentation Engineer à Senior Embedded Software Engineer à Tokyo.
+    </p>
+
+    <div class="footer-badges">
+        <span class="footer-badge">🎓 CS50 Harvard</span>
+        <span class="footer-badge" style="border-color: rgba(191, 87, 0, 0.3);">🔥 UT Austin</span>
+        <span class="footer-badge">⚡ FastBit</span>
+        <span class="footer-badge">🔧 STM32</span>
+        <span class="footer-badge">⏱️ FreeRTOS</span>
+        <span class="footer-badge">🐧 Linux</span>
+        <span class="footer-badge">🇬🇧 IELTS 7+</span>
+        <span class="footer-badge">🇯🇵 JLPT N2</span>
+    </div>
+
+    <p style="margin-top: 40px; font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; color: var(--text-muted);">
+        Plan généré le 10 Décembre 2025<br>
+        ~1 400€ • 3 ans • 20h/semaine • 1 objectif : 🇯🇵
+    </p>
+</footer>
+
+</body>
+</html>
